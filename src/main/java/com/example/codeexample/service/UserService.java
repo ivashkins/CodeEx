@@ -5,11 +5,12 @@ import com.example.codeexample.entity.User;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface UserService {
-    public ResponseEntity<User> createNewUser(UserDto userDto);
+    public Optional<User> createNewUser(UserDto userDto);
 
-    ResponseEntity<List<User>> findByParameters(UserDto params);
+    Optional<List<User>> findByParameters(UserDto params);
 
-    ResponseEntity<User> getById(Long id);
+    Optional<User> getById(Long id);
 }
